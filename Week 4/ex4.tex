@@ -1,0 +1,135 @@
+\documentclass{amsart}
+\usepackage{graphicx, amsthm}
+\usepackage{float}
+\usepackage{enumerate}
+\restylefloat{figure} 
+\usepackage{tikz} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\e}{\mathbf{e}}
+
+\theoremstyle{definition} \newtheorem*{definition}{Definition} 
+\theoremstyle{remark} \newtheorem*{ex}{Example} 
+
+
+\title{Exercise set $4$, \\ MS-A0402, Foundations of Discrete Mathematics}
+\begin{document}
+\hspace{-1cm}
+\maketitle
+ 
+\section*{Explorative exercises}
+I recommend to study the explorative problems before the first lecture of the week.
+
+\subsection*{Problem 1} 
+Recall that there are exactly $m^n$ functions $\{1,\dots ,n\}$ to $\{1,\dots ,m\}$. Why is that?
+\begin{enumerate}[a)]
+\item How many functions $\{1,\dots ,n\}\to\{1,\dots ,m\}$ are injective? What is required of $n$ and $m$ for injective functions to exist?
+\item How many functions from $\{1,\dots ,n\}$ to $\{1,2\}$ are {\em not} surjective?
+\item How many functions from $\{1,\dots ,n\}$ to $\{1,2,3\}$ are {\em not} surjective? 
+\end{enumerate}
+
+Hint: A non-surjective function must ``miss'' some $i\in\{1,2,3\}$ (meaning that $f(x)\neq i$ for all $x\in \{1,\dots ,n\}$). Count the number of functions that miss $1$, the functions that miss 2, and the functions that miss 3. Did you forget anything?
+
+\subsection*{Problem 2} 
+A permutation of $\{1,\dots, n \}$ can be defined in any of two different ways: either as a bijection $\{1,\dots, n \}\to \{1,\dots, n \}$, or as a total order of the set $\{1,\dots, n \}$. Discuss why these two are equivalent.
+
+
+\subsection*{Problem 3} 
+A cycle of length $k$ in a bijection $\sigma: \{1,\dots, n \}\to \{1,\dots, n \}$ is a sequence $a_1, a_2, \cdots a_k$ of distinct elements such that $$\sigma(a_1)=a_2,\,\sigma(a_2)=a_3,\,\cdots  ,\, \sigma(a_{k-1})=a_k,\, \sigma(a_k)=a_1.$$
+\begin{enumerate}[a)]
+\item  Find all cycles in the permutation $$(\sigma(1), \dots , \sigma(9))=(2,7,5,6,9,3,8,4,1).$$
+\item  Is it always true for every permutation $\sigma: \{1,\dots, n \}\to \{1,\dots, n \}$, that every element in $\{1,\dots, n\}$ is in some cycle?
+\end{enumerate}
+
+\pagebreak
+
+ \section*{Homework}
+The written solutions to the homework problems should be handed in on MyCourses by Monday 28.3 at 12:00. You are allowed and encouraged to discuss the exercises with your fellow students, but everyone should write down their own solutions.
+
+\subsection*{Problem 1}(10pts)
+How many integers from $1$ to $60$ are multiples of $2$ or $3$ but not both?
+
+\subsection*{Problem 2}(10pts)
+Consider the permutation $$\left(\begin{matrix}1& 2& 3& 4& 5& 6& 7& 8& 9 \\
+9&7&3&6&4&2&1&5&8\end{matrix}\right)$$
+\begin{enumerate}[a)]
+\item Write it as a product of disjoint cycles.
+\item Write it as a product of transpositions.
+\end{enumerate}
+
+\subsection*{Problem 3}(10pts)
+In how many ways can we rearrange the letters in the word 
+\begin{center}
+“knackered”
+\end{center}
+\begin{itemize}
+\item[(a)] with no restrictions?
+\item[(b)] if the first and last letter must be vowels?
+\end{itemize}
+
+
+\subsection*{Problem 4}(10pts)
+How many ways are there to tile dominos (with size $2 \times 1$) on a grid of size $2 \times 20$? \\
+\textit{(This is a modified job interview question for a Quantitative Researcher position in a London based research firm, $\copyright$\, G-Research} 
+
+\textit{\textbf{Hint} (just a suggestion): Experiment with first $2\times 1$, $2 \times 2$, $2\times 3$, $2\times 4$, etc. sized grids and try to come up with a way to relate
+$$a_n = \text{ number of ways to tile a grid of size } 2 \times n$$
+to the previous terms $a_{n-1}$ and $a_{n-2}$. Apply this recursive relation then until you reach $a_{20}$.)}
+
+
+
+\section*{Additional problems}
+
+These do not need to be returned for marking.
+
+\subsection*{Problem 1}
+How many permutations of the 26 letters in the english alphabet contains none of the three words ``cats'', ``snow'', or ``walk''? Here, we say that a sting contains the word `abcd' if the letters $a,b,c, d$ occur next to each other in that order in the string. 
+
+\subsection*{Problem 2}
+\begin{enumerate}[a)]
+\item $6$ people are first paired up for a dance. Afterwards, they pair up to play a game, where for some reason it is important that the two people in each pair did not dance with each other. In how many ways can this be done?
+\item Solve the same problem when there were initially $2n$ participants.
+\end{enumerate}
+
+\subsection*{Problem 3}
+Write the permutation $( 1 3 6 2 ) ( 2 5 6 4 ) ( 2 3 4 5 )$ \begin{enumerate}[a)]\item as a product of disjoint cycles. \item in two-line notation. \item as a product of transpositions. \end{enumerate}
+
+\subsection*{Problem 4}
+Consider the cycles $\rho=( 1 2 3 )$ and $\pi =( 1 2 )$ in $S_3$. \begin{enumerate}[a)]\item Show that
+$\rho^3=\pi^2=\iota$. \item Show that $S_3= \{\iota, \rho, \rho^2 \pi, \pi\rho, \pi\rho^2\}$.\end{enumerate}
+
+\subsection*{Problem 5}
+Let \begin{align*}a=(-1,-1,-1) ; b=(-1,-1,1) ; c=(-1,1,-1) ; d=(-1,1,1) ; \\ e=(1,-1,-1) ; f=(1,-1,1) ; g=(1,1,-1) ; h=(1,1,1)\end{align*} be the eight corners of a centrally symmetric cube $\square^3$ in three dimensions. Let $\rho$ be rotation by $90^{\circ}$ around the $z$-axis, let $\sigma$ be rotation by $90^{\circ}$ around the $y$-axis, and let $\tau$ be rotation by $90^{\circ}$ around the $x$-axis. Behold my breathtaking drawing skills for an illustration.
+\begin{center}
+\includegraphics[width=5cm]{cubesymm}
+\end{center}
+\begin{enumerate}[a)]
+\item Write $\rho$, $\sigma$, and $\tau$ as permutations of the set $\{a,b,c,d,e,f,g,h\}$, on two line notation and on cycle notation.
+\item Compute $\rho\sigma$, $\sigma\tau$, and $\tau\rho$.
+\item How many permutations in $S_8$ can be written as products of $\rho$, $\sigma$, and $\tau$?
+\item (challenging) How many symmetries ({\em i.e.} maps $\square^3\to\square^3$ that preserve the distance between corners) are there? Can all of them be written as products of $\rho, \sigma, \tau$? Can you find a symmetry that can not be written as such a product?
+\end{enumerate}
+
+\section*{Problem 6}
+For what values of $n\in\N$ do there exist sets $A$, $B$ and $C$ such that the following conditions hold: 
+\begin{align*}|A|=|B|=|C|=n\\
+|A\cap B|=|A\cap C|=|B\cap C|\\
+A\cap B\cap C =\emptyset\\
+|A\cup B\cup C|=2n
+\end{align*}
+
+\subsection*{Problem 7 (challenging)}
+\begin{enumerate}[a)]
+\item $6$ people celebrate midsummer by dancing in a big circle, each holding hands with the person to their left and to their right. After dinner, they pair up to play a game, where for some reason it is important that the two people in each pair did not hold hands during the dance. In how many ways can this be done?
+\item Solve the same problem when there were initially $2n$ participants.
+\item Compare this exercise to additional problem 2. Why is this one so much more difficult?
+\end{enumerate}
+
+\subsection*{Problem 8 (very challenging)}
+Let $X$ and $Y$ be two sets such that there is an injection $f:X\to Y$ and another injection $g:Y\to X$. Show that there is a bijection $$\phi: X\to Y.$$
+
+Note: This proves that our definition of cardinality satisfies the law: $$ \mbox{If }|X|\leq |Y|\leq |X|\mbox{, then }|X|=|Y|.$$
+\end{document}  
+
+\end{document}  

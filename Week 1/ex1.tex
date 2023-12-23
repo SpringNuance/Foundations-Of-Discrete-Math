@@ -1,0 +1,124 @@
+\documentclass{amsart}
+\usepackage{graphicx, amsthm}
+\usepackage{float}
+\usepackage{enumerate}
+\restylefloat{figure} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\e}{\mathbf{e}}
+
+\theoremstyle{definition} \newtheorem*{definition}{Definition} 
+\theoremstyle{remark} \newtheorem*{ex}{Example} 
+
+
+\title{Exercise set $1$, \\ MS-A0402, Foundations of Discrete Mathematics\\ Spring 2022}
+\begin{document}
+\hspace{-1cm}
+\maketitle
+ 
+\section*{Explorative exercises}
+These problems are meant to help you to prepare for the lectures and the more theoretical topics we will cover, and I may return to them during the lectures. They are meant to be tried to attempt in the beginning of the week and it is recommended to work on them in groups. These can be also discussed in the early exercise class of the week, but I recommend to think about them before the lectures. Course’s lecture notes are already available in MyCourses (Materials section), which cover these topics, so you can look at them already before the lecture. Hoeever, it is often not difficult to come up with a solution to these problems (especially not if one looks in the textbook), but the difficulty lies in comparing your solutions to those of others. You do not need to return these for marking.
+
+\textbf{On Week 1, there are no exercises that need to be returned for marking, we will start having these from Week 2 sheet.}
+
+\subsection*{Problem 1}
+Many composed statements (in mathematics and elsewhere) can be written using the logical symbols $\wedge$ (``and''), $\vee$ (``or''), $\to$ (``if...then...''), $\neg$ (``not''), $\leftrightarrow$ (``if and only if'', ``is equivalent to''). Whether these composed statements are true or false depends on whether or not the {\em elementary} statements that they are composed of are true.  For example, the composed statement ``it rains and it is cold'' is true precisely if the elementary statements ``it rains'' and ``it is cold'' are both true. Thus, we can {\em define} the truth value of the composed statement $A\wedge B$ by the following {\em truth table}, where $T$ and $F$ denote the truth values ``true'' and ``false'' respectively: \begin{center}
+\begin{tabular}{ |c c|c |} 
+ \hline
+ $A$&$B$&$A\wedge B$ \\
+ \hline 
+$T$&$T$& $T$\\
+$T$&$F$& $F$\\
+$F$&$T$& $F$\\
+$F$&$F$& $F$\\
+ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[a)]
+\item Make sure you understand the meaning of this truth table.
+\item Write similar truth tables that define the symbols $\wedge$ (``and''), $\vee$ (``or''), $\neg$ (``not''), $\leftrightarrow$ (``if and only if'', ``is equivalent to'').
+\item Please agree with me that the composed statement $x>3\to x^2>9$ should be true for all values of $x$. What is the truth value of the elementary statements $x>3$ and $x^2>9$, when $x=0$? When $x=4$? When $x=-4$?
+\item Using your answer in (3), write down a truth table for the implication symbol $\to$.
+\end{enumerate}
+
+ \subsection*{Problem 2}
+Many mathematical statements also contain quantifiers such as $\forall$ (``for all'') and $\exists$ (``there exists'').\begin{enumerate}[a)]
+\item Let $F(x,y)$ be the predicate ``$x$ and $y$ are friends''. Interpret the following two statements in natural language. Are they different?\begin{itemize}\item $\forall x\exists y : F(x,y)$\item $\exists y \forall x : F(x,y)$\end{itemize}
+\item What are the negations (opposites) of the statements in the previous question?
+\item What is the negation of an ``all-quantified'' statement $\forall x P(x)$ (where $P$ is an arbitrary predicate)? 
+\item What is the negation of an ``exists-quantified'' statement $\exists x P(x)$? 
+\end{enumerate}
+
+\subsection*{Problem 3}
+A set is nothing more than a collection of things ({\em elements}). Examples of sets include the set $\R$ of all real numbers, the set of all blue cars, the set of subsets of $\R$, etcetera. The language of sets contains the symbols $\in$ (``is a member of'') and $\subseteq$ (``is contained in'').
+\begin{enumerate}[a)]
+\item What does it mean that two sets are equal? Formulate this as a logical statement using the logical symbols $\forall$, $\leftrightarrow$, and the set theory symbol $\in$.
+\item Draw a Venn diagram that describes the statement $$\forall x : x\in R \to x\in S,$$ where $R$ and $S$ are sets. Can you formulate this statement purely in the language of set theory?
+\end{enumerate}
+
+\subsection*{Problem 4}
+The {\em power set} $P(S)$ consists of all subsets of the set $S$. The {\em cartesian product} $S\times T$ of two sets is the set $\{(s,t): s\in S, t\in T\}$.
+\begin{enumerate}[a)]
+\item Let $S=\{a,b,c\}$, $T=\{1,2\}$. Write down $S\times T$, $P(S)$ and $P(T)$.
+\item Let $S$ be a finite set with $|S|=n$ elements and let $T$ be a finite set with $|T|=m$ elements. How many elements does $S\times T$ have?
+\item How many elements does $P(S)$ have, if $S$ has $n$ elements?  
+\end{enumerate}
+
+\section*{Additional exercises}
+The main task of these problems is to practice using different ``proof techniques''. Also for these problems, I recommend that you work in groups. These do not need to be returned for marking.
+
+\subsection*{Exercise 1} 
+Come up with three sentences (that can be true or false), and denote them by $p$, $q$ and $r$. Formulate the following eight composed sentences in natural language, and convince yourself  that they ``should be'' pairwise equivalent, according to your intuition.
+Prove using truth tables that they are indeed equivalent. 
+\begin{enumerate}[a)]
+\item $$p\to q \mbox{ and }\neg q\to\neg p$$
+\item $$p\leftrightarrow q \mbox{ and }(p\wedge q)\vee(\neg p\wedge\neg q)$$
+\item $$p\leftrightarrow q \mbox{ and }(p\to q)\wedge(q\to p)$$
+\item $$(p\to r)\vee(q\to r)\mbox{ and } (p\wedge q)\to r$$
+\end{enumerate}
+
+\subsection*{Exercise 2}
+Are the following sentences true or false?
+\begin{enumerate}[a)]
+\item $0\in\{0\}$.
+\item $\{0\}\in 0$.
+\item $0\in\Z$.
+\item $0\subseteq \Z$.
+\item $\{0\}\subseteq \Z$.
+\item $0\in\{0,\{0\}, \{0,\{0,\{0\}\}\}\}.$
+\item $0\in\emptyset$
+\item $\emptyset\in\{0\}$
+\item $\emptyset\subseteq\{0\}$
+\item $\emptyset=\{0\}$
+\end{enumerate}
+
+\subsection*{Exercise 3}
+Show that if $A$ and $B$ are sets such that $A\times B = B\times A$, then either $A=B$ or $A=\emptyset$ or $B=\emptyset$.
+
+\subsection*{Exercise 4}
+Show that if $A\subseteq B$ and $C\subseteq D$, then $A\times C\subseteq B\times D$.
+
+
+\subsection*{Exercise 5}
+Write down the truth table of the composed statement $$(p \vee
+q) \to (p \wedge \neg r).$$
+
+\subsection*{Exercise 6} 
+Let $L(x, y)$ be the sentence ``$x$ loves $y$''. Write the following sentences using connectives, quantors, equality signs, and the elementary sentence $L$.
+\begin{enumerate}[a)]
+\item Everybody loves Raymond.
+\item Everybody loves somebody.
+\item There exists somebody wo everybody loves.
+\item Nobody loves everybody.
+\item There is some person, whom Raymond does not love.
+\item There is some person, whom nobody loves.
+\item There is {\em exactly} one person, whom everybody loves.
+\item Raymond loves exactly two persons.
+\item Everybody loves themselves.
+\item There is somebody, who only loves themself.
+\end{enumerate}
+
+
+
+\end{document}  

@@ -1,0 +1,138 @@
+\documentclass{amsart}
+\usepackage{graphicx, amsthm}
+\usepackage{float}
+\usepackage{enumerate}
+\restylefloat{figure} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\e}{\mathbf{e}}
+
+\theoremstyle{definition} \newtheorem*{definition}{Definition} 
+\theoremstyle{remark} \newtheorem*{ex}{Example} 
+
+
+\title{Exercise set $2$, \\ MS-A0402, Foundations of Discrete Mathematics\\Spring 2022}
+\begin{document}
+\hspace{-1cm}
+\maketitle
+ 
+\section*{Explorative exercises}
+These problems are meant to help you to prepare for the lectures and the more theoretical topics we will cover, and I may return to them during the lectures. They are meant to be tried to attempt in the beginning of the week and it is recommended to work on them in groups. These can be also discussed in the exercise classes, but I recommend to think about them before the lectures. Course's lecture notes are already available in MyCourses (Materials section), which cover these topics, so you can look at them already before the lecture. However, it is often not difficult to come up with a solution to these problems (especially not if one looks in the textbook), but the difficulty lies in comparing your solutions to those of others. You do not need to return these for marking. 
+
+\subsection*{Problem 1}
+Recall (from Calculus or elsewhere) that a function $f:A\to B$ from a {\em domain} $A$ to a {\em codomain} $B$ is a ``rule'' that assigns to every element $a\in A$ a unique element $f(a)\in B$. We also sometimes call functions {\em mappings}. If $f(a)=b$ (for some given function $f$), we say that $a$ is {\em mapped to} $b$, and that $b$ is the {\em image} of $a$.
+A function $f:A\to B$ is called 
+\begin{itemize}
+\item  {\em injective} if different elements in $A$ are always mapped to different elements in $B$, i.e. if $$\forall x,y\in A: x\neq y\Rightarrow f(x)\neq f(y).$$ 
+\item {\em surjective} if every element in $B$ is the image of some element in $A$, i.e. if $$\forall b\in B:\exists a\in A : f(a)=b.$$
+\end{itemize}
+ Give an example of a function $f:\Z\to\Z$ that is 
+ \begin{enumerate}[a)]
+\item Injective but not surjective
+\item Surjective but not injective
+\item Both injective and surjective. (Such functions are called {\em bijective}.)
+\item Neither injective nor surjective.
+\end{enumerate}
+
+\subsection*{Problem 2}
+ \begin{enumerate}[a)]
+\item Give an example of a surjective map $\{1,2,3\}\to\{a,b\}$. Does there exist an injective one?
+\item  Give an example of an injective map $\{a,b\}\to \{1,2,3\}$. Does there exist a surjective one?
+\item More generally: Let $A$ and $B$ be finite sets. What properties do the cardinalities $|A|$ and $|B|$ have to satisfy, if there is an injection $A\to B$? What about if there is a surjection $B\to A$?
+\end{enumerate}
+
+ \subsection*{Problem 3}
+A relation $R$ on a set $A$ is an open sentence $xRy$ (or sometimes $R(x,y)$) that is either true or false for all $x,y\in A$. Examples of relations include ``$x$ and $y$ are siblings'' (on the set of all people), ``$x$ divides $y$'' (on the set of integers), ``$x<y$'' (on $\R$), ``$x=y$'' (on any set $A$), etc.
+A relation $R$ is called
+ \begin{itemize}
+\item Reflexive if $xRx$ for every $x\in A$.
+\item Symmetric if $xRy$ implies $yRx$.
+\item Transitive if $xRy$ and $yRz$ implies $xRz$ for every $x,y,z\in A$.
+\end{itemize}
+\begin{enumerate}[a)]
+\item For the four examples above, determine if they are reflexive, transitive, and/or symmetric.
+\item Give an example of a relation on $\Z$ (or on some other set) that is:
+\begin{itemize}
+\item Reflexive, symmetric, and transitive.
+%\item Reflexive, symmetric, and not transitive.
+%\item Reflexive, not symmetric, and transitive.
+\item Reflexive, not symmetric, and not transitive.
+%\item Not reflexive, symmetric, and transitive.
+\item Not reflexive, symmetric, and not transitive.
+\item Not reflexive, not symmetric, and transitive.
+%\item Not reflexive, not symmetric, and not transitive.
+\end{itemize}
+There are four similar obvious questions that I have left out, do those as well if you have time.
+\end{enumerate}
+
+
+ \section*{Homework}
+\textbf{The written solutions to the homework problems should be handed in on MyCourses (return box set up there) by Monday 14.3., 12:00.} 
+
+\subsection*{Problem 1}
+(10pts) Prove that if $n \in \Z$, then $n^2 + 3n + 4$ is even.\\
+Hint: Direct proof by cases Case 1: assume $n$ is even and Case 2: assume $n$ is odd.
+
+\subsection*{Problem 2}
+(10pts) Prove that there exists no integers $a$ and $b$ for which $24a + 6b = 1$.\\
+Hint: Use contradiction proof.
+
+\subsection*{Problem 3}
+(10pts) Prove by induction that for all $n \in \Z_+ = \{1,2,\dots\}$ we have
+$$\sum_{k = 1}^n (-1)^k k^2  = \frac{(-1)^n (n+1)n}{2}.$$
+
+\subsection*{Problem 4}
+(10pts) Define a relation $\sim$ on $\R$ by $a \sim b$ if and only if $a \leq b$. Check if $\sim$ is (i) reflexive, (ii) symmetric, and/or (iii) transitive, and prove it if it does. If it does not satisfy the property you are checking, give an example to show it.
+
+\pagebreak
+
+\section*{Additional problems}
+
+These do not need to be returned for marking.
+
+\subsection*{Exercise 1}
+Prove that, if $A$, $B$ and $C$ are sets, then $$(A\cup B)\times C = (A\times C) \cup (B\times C).$$
+
+\subsection*{Exercise 2}
+Prove that $$(\Z\times \R)\cap (\R\times \Z) = \Z\times \Z.$$
+
+\subsection*{Exercise 3}
+Give an example of two sets $X$ and $Y$ and functions $f:X\to Y$, $g:Y\to X$ such that $$\forall y\in Y: f(g(y))=y\hspace{0.5cm}\mbox{ but }\hspace{0.5cm}\neg \forall x\in X : g(f(x))=x.$$ 
+
+\subsection*{Exercise 4}
+Consider the relation $\sim$ on $\R$ given by $x\sim y$ if $x^2-y^2\in\Z$.
+\begin{enumerate}[a)]
+\item Show that $\sim$ is an equivalence relation
+\item What is the equivalence class of $0$ under $\sim$?
+\item What is the equivalence class of $\frac{1}{3}$ under $\sim$?
+\end{enumerate}
+
+
+\subsection*{Problem 5}
+Prove by induction that for every $n\in\N$ holds $$\frac{1}{2!}+\frac{2}{3!} + \cdots + \frac{n}{(n+1)!} = 1-\frac{1}{(n+1)!}.$$
+
+\subsection*{Exercise 6}
+We all know that socks can have different colours. Yet, below is a ``proof'' by induction that all socks have the same colour. What is wrong with the ``proof''?
+\begin{itemize}
+\item Let $P(n)$ be the statement ``All socks in any set of $n$ socks have the same colour''. We want to prove $\forall n\in\N_{>0}: P(n)$.
+\item Base case $(n=1)$: If there is only one sock, then there is only one colour.
+\item Induction step: Assume $P(n)$ is true, and consider a set of $n+1$ socks. Denote these socks $s_1, s_2, s_3,\dots , s_{n+1}$. Since $P(n)$ is true, we know that all the socks  $s_1, s_2, \dots , s_n$ have the same colour, and also that $s_2,\dots, s_n, s_{n+1}$  have the same colour. Clearly, these colours must be the same, as the socks $s_2,\dots, s_n$ can only have one colour. This proves that all the $n+1$ socks have the same colour, so $P(n)\to P(n+1)$ holds.
+\item By the principle of induction $P(n)$ holds for any positive integer $n$.
+\end{itemize}
+
+\subsection*{Exercise 7}
+We all know that $1+2+3=6$, whereas $\frac{(3+\frac{1}{2})^2}{2}$ is not even an integer. Yet, below is a ``proof'' by induction that in particular implies that $$1+2+3=\frac{(3+\frac{1}{2})^2}{2}.$$ What is wrong with the ``proof''?
+\begin{itemize}
+\item Let $P(n)$ be the statement $$\sum_{i=1}^n i= \frac{(n+\frac{1}{2})^2}{2}.$$ We want to prove $\forall n\in\N_{>0}: P(n)$.
+\item Induction step: Assume $P(n)$ is true. Then \begin{align*}\sum_{i=1}^{n+1} i = n+1+\sum_{i=1}^n i &\stackrel{\mathrm{I.H.}}{=}n+1+\frac{(n+\frac{1}{2})^2}{2}=\frac{2n+2+n^2 + n + \frac{1}{4}}{2}\\& = \frac{n^2+3n + \frac{9}{4}}{2}=\frac{(n+\frac{3}{2})^2}{2},\end{align*} which is the statement $P(n+1)$. Thus $P(n)\to P(n+1)$ holds.
+\item By the principle of induction $P(n)$ holds for any positive integer $n$.
+\end{itemize}
+
+\subsection*{Exercise 8 (challenging)}
+Prove by ``double induction'' that the Fibonacci numbers satisfy 
+$$f_{m+n+1}=f_m f_n + f_{m+1}f_{n+1} \,\, \mbox{ for all } m,n\geq 0.$$
+
+
+
+\end{document}  

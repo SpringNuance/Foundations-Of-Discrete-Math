@@ -1,0 +1,136 @@
+\documentclass{amsart}
+\usepackage{graphicx, amsthm}
+\usepackage{float}
+\usepackage{enumerate}
+\restylefloat{figure} 
+\usepackage{tikz} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\e}{\mathbf{e}}
+
+\theoremstyle{definition} \newtheorem*{definition}{Definition} 
+\theoremstyle{remark} \newtheorem*{ex}{Example} 
+
+
+\title{Exercise set $6$, \\ MS-A0402, Foundations of Discrete Mathematics}
+\begin{document}
+\hspace{-1cm}
+\maketitle
+ 
+\section*{Explorative exercises}
+I recommend that you study the explorative problems before the first lecture of the week.
+
+\subsection*{} Recall that an integer $a\in\Z$ {\em divides} $b\in\Z$ ($a|b$) if there is $n\in\Z$ such that $an=b$.
+
+\subsection*{Problem 1}To practice your understanding of the divisibility definition and of logical symbols, detemine whether the following statements are true or false. (All quantifiers are taken over the integers $\Z$.)
+\begin{enumerate}[a)]
+\item $\forall a: a|a$.
+\item $\forall a: 1|a$.
+\item $\forall a: a|1$.
+\item $\forall a: 0|a$.
+\item $\forall a: a|0$.
+\item $\forall a,b: a|b\to b|a$.
+\item $\forall a,b,c : \left(a|b\wedge a|c\right)\to a|b+c$.
+\item $\forall a,b,c : \left(a|b\wedge b|c\right)\to a|c$.
+\item  $\forall a,b :  \left(a|b\wedge b|a\right)\to (a=b\vee a=-b)$.
+\end{enumerate}
+
+\subsection*{Problem 2} 
+List all the integers that divide 98. Do the same with all numbers that divide 105. What is the {\em greatest common divisor} of $98$ and $105$?
+
+ \subsection*{Problem 3}
+The method used in Problem 2 to find the greatest common divisor is very inefficient if the numbers involved are large. Already computing, for example, $\gcd(2331, 2037)$ with this method seems like a disturbingly slow task. We will now find an easier algorithm to do this:
+\begin{enumerate}[a)]
+\item Show that, if $a,b,n\in \Z$, then the common divisors of $a$ and $b$ are the same as the common divisors of $a$ and $b-na$.
+\item Conclude that $$\gcd(2331, 2037)=\gcd(2037, 2331-2037)=\gcd(2037, 294).$$
+\item Continue this process, replacing $\gcd(2331, 2037)$ by the greatest common divisors of smaller and smaller numbers.
+\item Show that, if $a> 0$, then $\gcd(a,0)=a$.
+\item Use this to compute $\gcd(2331, 2037)$.
+\end{enumerate}
+
+ \subsection*{Problem 4}
+Study the equation $$3x-2y=1.$$ Clearly, it has the integer solution $x=1, y=1$. 
+\begin{enumerate}[a)]
+\item Can you find more integer solutions? (Hint: if you add  $2$ to the value of $x$, how can you modify  the value of $y$ to get a new solution of the equation?)
+\item Can you find {\em all} integer solutions? (And can you prove that there are no others?)
+\end{enumerate}
+\pagebreak
+
+ \section*{Homework}
+The written solutions to the homework problems should be handed in on MyCourses by Monday 11.4., 12:00.  You are allowed and encouraged to discuss the exercises with your fellow students, but everyone should write down their own solutions.
+
+\subsection*{Problem 1}
+(10pts) Does the following Diophantine equation 
+$$20x + 10y = 65.$$
+have solutions $x,y \in \N$? If yes, find all the solutions. If not, justify your answer.
+
+
+\subsection*{Problem 2}
+(10pts) Does the following Diophantine equation 
+$$20x+16y=500.$$
+have solutions $x,y \in \N$? If yes, find all the solutions. If not, justify your answer.
+
+\subsection*{Problem 3}
+(10pts) How many integers less than $22220$ are relatively prime to $22220$?
+
+\subsection*{Problem 4}
+(10pts) Compute the last two digits of $2022^{2022}$.
+
+
+
+
+
+
+
+\section*{Additional problems}
+
+These do not need to be returned for marking.
+
+\subsection*{Problem 1}
+Show that $7|13^n-6^n$ for all $n\in\Z$.
+
+
+\subsection*{Problem 2}
+Compute 
+\begin{enumerate}[a)]\item$3^{19}\mod 13$.
+\item $4^{12}\mod 27$.
+\item $12^{27}\mod 15$.
+\item $146^2\mod 21$
+\end{enumerate}
+
+\subsection*{Problem 3}
+Are the following statements true or false for arbitrary integers $a$, $b$, and $n$? Prove or find a counterexample.
+\begin{enumerate}[a)]
+\item If $a\equiv b\mod n$, then $a^2\equiv b^2\mod n$.
+\item If $a^2\equiv b^2\mod n$, then $a\equiv b\mod n$.
+\end{enumerate}
+
+
+\subsection*{Problem 4}
+Show that $$144|n^8-2n^6+n^4$$ for any integer $n$. (Hint: Factorize!)
+
+\subsection*{Problem 5}
+Compute 
+\begin{enumerate}[a)]\item$\varphi(200)$.
+\item$\varphi(121)$.
+\item$\varphi(635)$.
+\item$\varphi(1010)$.
+\item$\varphi(2021)$.
+\end{enumerate}
+where $\varphi$ denotes Euler's phi function.
+
+\subsection*{Problem 6}
+A seemingly very difficult open question in number theory is whether there are infinitely many ``twin primes'', meaning two consecutive odd numbers that are both primes. Show that there are only finitely many (in fact, only one ``triplet prime''), meaning {\em three} consecutive odd numbers that are all primes.
+
+\subsection*{Exercise 7 (challenging)}
+Let $F_n$ be the $n$:th Fibonnacci number. 
+\begin{enumerate}[a)]
+\item Prove that $\gcd(F_{n}, F_{n-1})=1$.
+\item How many steps does Euclid's algorithm take to compute $\gcd(F_n, F_{n-1})$?
+\item Show that, if $a,b$ are any numbers with $b\leq a< F_n$, then Euclid's algorithm requires more steps to compute $\gcd(F_n, F_{n-1})$, than to compute $\gcd(a,b)$. (Punchline: The Fibonnacci numbers are the worst possible input for Euclid's algorithm.)
+\end{enumerate}
+
+
+
+\end{document}
